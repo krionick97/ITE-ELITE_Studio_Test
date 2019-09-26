@@ -1,0 +1,31 @@
+.main__mobileMenu
+  --mm-listitem-size: 50px
+  &-item
+    +notoSans
+    font-size: 1.3rem
+    text-transform: uppercase    
+  &-link
+    +notoSans
+    font-size: 1.3rem
+    text-transform: uppercase    
+
+.mm-navbar
+  color: $color-text-dark !important
+  background-color: $color-navbar !important
+  &__title
+    +notoSans
+    font-size: 1.3rem
+    color: #000000
+    text-transform: uppercase
+    font-weight: 600
+    margin: 0 0 0 1.4rem
+    letter-spacing: 0.08rem
+
+.mm-listitem
+  background-color: $color-menu-item
+
+.mm-menu
+  &_offcanvas
+    max-width: 25rem !important
+.mm-wrapper_opening .mm-menu_offcanvas~.mm-slideout
+  transform: translate3d(25rem, 0, 0) !important

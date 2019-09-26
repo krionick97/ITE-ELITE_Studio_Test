@@ -1,0 +1,436 @@
+@font-face {
+  font-family: 'Georgia-Regular';
+  src: url("../fonts/Georgia/Georgia-Regular.ttf") format("truetype");
+  src: url("../fonts/Georgia/Georgia-Regular.eot?#iefix") format("embedded-opentype");
+  src: url("../fonts/Georgia/Georgia-Regular.otf") format("opentype");
+  src: url("../fonts/Georgia/Georgia-Regular.woff") format("woff");
+  src: url("../fonts/Georgia/Georgia-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lora-Italic';
+  src: url("../fonts/Lora/Lora-Italic.ttf") format("truetype");
+  src: url("../fonts/Lora/Lora-Italic.eot?#iefix") format("embedded-opentype");
+  src: url("../fonts/Lora/Lora-Italic.otf") format("opentype");
+  src: url("../fonts/Lora/Lora-Italic.woff") format("woff");
+  src: url("../fonts/Lora/Lora-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NotoSans-Regular';
+  src: url("../fonts/NotoSans/NotoSans-Regular.ttf") format("truetype");
+  src: url("../fonts/NotoSans/NotoSans-Regular.eot?#iefix") format("embedded-opentype");
+  src: url("../fonts/NotoSans/NotoSans-Regular.otf") format("opentype");
+  src: url("../fonts/NotoSans/NotoSans-Regular.woff") format("woff");
+  src: url("../fonts/NotoSans/NotoSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans-Light';
+  src: url("../fonts/OpenSans/OpenSans-Light.otf") format("opentype");
+  src: url("../fonts/OpenSans/OpenSans-Light.eot?#iefix") format("embedded-opentype");
+  src: url("../fonts/OpenSans/OpenSans-Light.woff") format("woff");
+  src: url("../fonts/OpenSans/OpenSans-Light.woff2") format("woff2");
+  src: url("../fonts/OpenSans/OpenSans-Light.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  font-size: 10px;
+}
+
+.block {
+  display: block;
+  color: #000000;
+  width: 6rem;
+  height: 6rem;
+}
+
+#my-page {
+  max-width: 192rem;
+  margin: 0 auto;
+}
+
+.header {
+  display: none;
+  padding: 0.8rem 1.3rem;
+  background-image: url("../img/background-side-2.jpg");
+  background-size: cover;
+}
+
+.header__left-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main__title {
+  font-family: 'Georgia-Regular', serif;
+  font-size: 2.8rem;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.main__leftSide {
+  width: 31rem;
+  height: 100%;
+  background: url("../img/background-side.jpg");
+  background-size: cover;
+}
+
+.main__logo {
+  margin: 0 auto 18rem;
+  padding-top: 3rem;
+  width: 24.2rem;
+}
+
+.main__logo img {
+  margin-bottom: 2.8rem;
+}
+
+.main__logo-paragraph {
+  font-family: 'OpenSans-Light', sans-serif;
+  font-size: 1.6rem;
+  color: #c8c8c8;
+  margin-left: 0.2rem;
+  line-height: 1.2;
+}
+
+.main__deskMenu-list {
+  margin-bottom: 12.2rem;
+}
+
+.main__deskMenu-companyData {
+  margin-bottom: 6.1rem;
+}
+
+.main__mobileMenu {
+  display: none;
+}
+
+.main__mobileMenu-list .main__menu-item:before {
+  display: none;
+}
+
+.main__mmenu-link {
+  display: block;
+  width: 3.7rem;
+  margin: 0 1.3rem 0 0;
+}
+
+.main__mmenu-button {
+  display: block;
+  height: 1.2rem;
+  width: 2rem;
+  position: relative;
+  margin: 1.2rem 0 0;
+}
+
+.main__mmenu-button:after {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 0.1rem;
+  height: 4.6rem;
+  background-color: #7a7777;
+  top: -2.2rem;
+  left: 3.6rem;
+}
+
+.main__mmenu-burger {
+  display: block;
+  margin: 0.8rem 0 0;
+  background-color: #ffffff;
+  position: relative;
+  width: 2.2rem;
+  height: 0.2rem;
+}
+
+.main__mmenu-burger:before {
+  display: block;
+  position: absolute;
+  content: '';
+  background-color: #ffffff;
+  width: 2.2rem;
+  height: 0.2rem;
+  bottom: 0.88rem;
+  left: 0;
+}
+
+.main__mmenu-burger:after {
+  display: block;
+  position: absolute;
+  content: '';
+  background-color: #ffffff;
+  width: 2.2rem;
+  height: 0.2rem;
+  top: 0.88rem;
+  left: 0;
+}
+
+.main__menu {
+  padding-left: 3.8rem;
+}
+
+.main__menu-item {
+  display: block;
+  margin: 4.6rem 0;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.main__menu-item:before {
+  display: block;
+  position: absolute;
+  content: '';
+  width: 30.9rem;
+  height: 0.1rem;
+  background-color: #7a7777;
+  z-index: 1;
+  left: -3.8rem;
+  top: 3.6rem;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.main__menu-link {
+  font-family: 'OpenSans-Light', sans-serif;
+  font-size: 1.6rem;
+  color: #f8f8f8;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+}
+
+.main__menu-link:active {
+  outline: none;
+  font-weight: 600;
+}
+
+.main__menu-phone {
+  display: block;
+  width: 3rem;
+  position: relative;
+}
+
+.main__menu-phone:before {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 4.4rem;
+  width: 0.1rem;
+  background-color: #7a7777;
+  top: -0.8rem;
+  left: -0.8rem;
+}
+
+.main__menu-phone img {
+  margin: 0.5rem 0 0 1rem;
+}
+
+.main__menu-dataItem:not(:last-child) {
+  margin-bottom: 1.6rem;
+}
+
+.main__menu-dataItem a {
+  color: #c8c8c8;
+}
+
+.main__menu-contact:not(:last-child) {
+  margin-bottom: 0.9rem;
+}
+
+.main__menu-tel {
+  color: #fefefe;
+  font-size: 2rem;
+}
+
+.main__menu-feedback {
+  font-family: 'OpenSans-Light', sans-serif;
+  font-size: 1.6rem;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  color: #c18f58;
+  position: relative;
+}
+
+.main__menu-feedback:before {
+  position: absolute;
+  content: '';
+  width: 12.2rem;
+  height: 0.1rem;
+  background: url("../img/dashed-underline.svg");
+  background-size: cover;
+  bottom: -0.5rem;
+}
+
+.main__menu-feedback:hover {
+  cursor: pointer;
+}
+
+.main__menu-feedback:active {
+  -webkit-transform: translateY(0.1rem);
+          transform: translateY(0.1rem);
+}
+
+/* Responsive */
+@media (max-width: 1020px) {
+  .main__leftSide {
+    width: 30rem;
+  }
+  .main__menu-item:before {
+    width: 29.9rem;
+  }
+}
+
+@media (max-width: 960px) {
+  .main__leftSide {
+    width: 24rem;
+  }
+  .main__logo {
+    width: 24rem;
+  }
+  .main__logo img {
+    width: 20rem;
+    height: auto;
+  }
+  .main__menu-item:before {
+    width: 23.9rem;
+  }
+  .main__menu-link {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 820px) {
+  .main__leftSide {
+    width: 22rem;
+  }
+  .main__logo {
+    width: 22rem;
+  }
+  .main__logo img {
+    width: 18rem;
+  }
+  .main__menu {
+    padding-left: 2.6rem;
+  }
+  .main__menu-item:before {
+    width: 23rem;
+  }
+}
+
+@media (max-height: 1070px) {
+  .main__logo {
+    margin: 0 auto 2.2rem;
+  }
+}
+
+@media (max-height: 920px) {
+  .main__menu-item {
+    margin: 3rem 0;
+  }
+  .main__menu-item:before {
+    top: 2.6rem;
+  }
+  .main__deskMenu-list {
+    margin-bottom: 5rem;
+  }
+  .main__deskMenu-companyData {
+    margin-bottom: 3rem;
+  }
+  .main__deskMenu-dataItem:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-height: 720px) {
+  .main__logo {
+    margin: 0 auto 1.2rem;
+  }
+  .main__logo img {
+    display: block;
+    height: 6rem;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .main__logo-paragraph {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    display: block;
+  }
+  .main__leftSide {
+    display: none;
+  }
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.main__mobileMenu {
+  --mm-listitem-size: 50px;
+}
+
+.main__mobileMenu-item {
+  font-family: 'NotoSans-Regular', sans-serif;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.main__mobileMenu-link {
+  font-family: 'NotoSans-Regular', sans-serif;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.mm-navbar {
+  color: #5d5d5d !important;
+  background-color: #e4e3df !important;
+}
+
+.mm-navbar__title {
+  font-family: 'NotoSans-Regular', sans-serif;
+  font-size: 1.3rem;
+  color: #000000;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 0 0 0 1.4rem;
+  letter-spacing: 0.08rem;
+}
+
+.mm-listitem {
+  background-color: #efeeea;
+}
+
+.mm-menu_offcanvas {
+  max-width: 25rem !important;
+}
+
+.mm-wrapper_opening .mm-menu_offcanvas ~ .mm-slideout {
+  -webkit-transform: translate3d(25rem, 0, 0) !important;
+          transform: translate3d(25rem, 0, 0) !important;
+}
+/*# sourceMappingURL=style.css.map */

@@ -25,6 +25,8 @@
     height: 100%
     background: url('../img/background-side.jpg')
     background-size: cover
+  &__rightSide
+    flex-grow: 1
 
   &__logo
     margin: 0 auto 18rem
@@ -95,7 +97,7 @@
         left: 0
 
   &__menu
-    padding-left: 3.8rem
+    // padding-left: 3.8rem
     &-item
       display: block
       margin: 4.6rem 0
@@ -105,15 +107,16 @@
         display: block
         position: absolute
         content: ''
-        width: 30.9rem
+        width: 100%
         height: 0.1rem
         background-color: $color-line
         z-index: 1
-        left: -3.8rem
+        rigth: 0
         top: 3.6rem
         transition: 0.1s
     &-link
       +openSans
+      margin-left: 3.8rem
       font-size: 1.6rem
       color: $color-link
       text-decoration-line: none
@@ -152,6 +155,7 @@
     &-feedback
       +openSans
       font-size: 1.6rem
+      margin-left: 3.8rem
       transition: 0.1s
       color: $color-link-red
       position: relative
@@ -168,16 +172,11 @@
       &:active
         transform: translateY(0.1rem)
 
-
 /* Responsive */
 @media (max-width: 1020px)
   .main
     &__leftSide
       width: 30rem
-    &__menu
-      &-item
-        &:before
-          width: 29.9rem
 
 @media (max-width: 960px)
   .main
@@ -188,15 +187,19 @@
       & img
         width: 20rem
         height: auto
-    &__menu
-      &-item
-        &:before
-          width: 23.9rem
       &-link
         font-size: 1.4rem
 
 @media (max-width: 820px)
   .main
+    &__logo
+      & img
+        display: block
+        height: 6rem
+        text-align: center
+        margin: 0 auto
+      &-paragraph
+        display: none
     &__leftSide
       width: 22rem
     &__logo
@@ -204,18 +207,27 @@
       & img
         width: 18rem
     &__menu
-      padding-left: 2.6rem
-      &-item
-        &:before
-          width: 23rem
+      &-link
+        margin-left: 2.6rem
+      &-feedback
+        margin-left: 2.6rem
 
 @media (max-height: 1070px)
   .main
     &__logo
       margin: 0 auto 2.2rem
 
-@media (max-height: 920px)
+@media (max-height: 950px)
   .main
+    &__logo
+      & img
+        display: block
+        height: 6rem
+        text-align: center
+        margin: 0 auto
+      &-paragraph
+        display: none
+
     &__menu
       &-item
         margin: 3rem 0
@@ -234,15 +246,8 @@
   .main
     &__logo
       margin: 0 auto 1.2rem
-      & img
-        display: block
-        height: 6rem
-        text-align: center
-        margin: 0 auto
-      &-paragraph
-        display: none
 
-@media screen and (max-width: 768px)
+@media (max-width: 768px)
   .main
     display: block
     &__leftSide

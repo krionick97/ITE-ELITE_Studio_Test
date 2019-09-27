@@ -1,0 +1,32 @@
+  
+.owl
+  &-carousel
+    max-width: 161rem
+    &__slider
+      width: 100vw
+      height: 100vh
+      background-image: url('../img/img-slide-1.jpg')
+      background-size: 100% 100%
+      position: relative
+  &-nav
+    display: none
+  &-dots
+    display: flex
+    position: absolute
+    align-items: center
+    bottom: 2rem
+    z-index: 2
+  &-dot
+    margin: 0 0.5rem
+    &:hover
+      cursor: pointer
+  &-dot span
+    display: block
+    width: 1rem
+    height: 1rem
+    border-radius: 50%
+    background-color: $color-white
+    transition: 0.1s
+  &-dot.active span
+    width: 1.6rem
+    height: 1.6rem

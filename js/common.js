@@ -21,9 +21,8 @@ $(document).ready(function() {
   $(".owl-carousel").owlCarousel({
     loop: true,
     nav: true,
+    margin: 0,
     dotsContainer: '#carousel-custom-dots',
-    // dotsEach: true,
-    // dotsData: true,
     responsive: {
       0: {
         items: 1

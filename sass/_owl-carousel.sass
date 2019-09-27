@@ -3,7 +3,6 @@
   &-carousel
     max-width: 161rem
     &__slider
-      width: 100vw
       height: 100vh
       background-image: url('../img/img-slide-1.jpg')
       background-size: auto 100%
@@ -80,6 +79,8 @@
     position: absolute
     bottom: 2rem
     z-index: 2
+    bottom: 4.2vh
+    left: 19.8vw
   &-dot
     margin: 0 0.5rem
     &:hover
@@ -96,6 +97,12 @@
     height: 1.6rem
 
 // Responsive
+@media (max-width: 1610px)
+  .owl
+    &-carouse
+      &__slider
+        background-size: 100% auto
+
 @media (max-height: 1068px)
   .owl
     &-carousel

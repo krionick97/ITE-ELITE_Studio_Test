@@ -173,8 +173,27 @@
         transform: translateY(0.1rem)
 
 /* Responsive */
-@media (max-width: 1020px)
+@media (max-width: 1880px)
   .main
+    &__logo
+      margin: 0 auto 2.2rem
+      & img
+        display: block
+        height: 6rem
+        text-align: center
+        margin: 0 auto 2rem
+
+@media (max-width: 1860px)
+  .main
+    &__logo-paragraph
+      max-width: 18rem
+      margin: 0 auto 0 3rem
+
+@media (max-width: 1024px)
+  .main
+    &__logo
+      &-paragraph
+        display: none
     &__leftSide
       width: 30rem
 
@@ -219,15 +238,6 @@
 
 @media (max-height: 950px)
   .main
-    &__logo
-      & img
-        display: block
-        height: 6rem
-        text-align: center
-        margin: 0 auto
-      &-paragraph
-        display: none
-
     &__menu
       &-item
         margin: 3rem 0

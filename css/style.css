@@ -449,8 +449,102 @@ html {
   width: 100vw;
   height: 100vh;
   background-image: url("../img/img-slide-1.jpg");
-  background-size: 100% 100%;
+  background-size: auto 100%;
   position: relative;
+}
+
+.owl-carousel__block {
+  display: inline-block;
+  background-color: rgba(73, 66, 60, 0.4);
+  padding: 0.2rem 1rem 0.6rem 1.2rem;
+  margin: 73.2vh 0 2rem 4vw;
+}
+
+.owl-carousel__block-title {
+  font-family: 'NotoSans-Regular', sans-serif;
+  font-size: 5.8rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.owl-carousel__block-subtitle {
+  font-family: 'NotoSans-Regular', sans-serif;
+  font-size: 3.6rem;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.owl-carousel__link {
+  width: 17rem;
+  padding: 1.5rem 1.8rem;
+  margin: 0 0 0 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #b17573;
+  font-family: 'Lora-Italic', sans-serif;
+  color: #ffffff;
+  font-size: 1.8rem;
+  text-decoration: none;
+  border-radius: 0.1rem;
+}
+
+.owl-carousel__link:hover {
+  cursor: pointer;
+}
+
+.owl-carousel__link-arrow {
+  display: block;
+  width: 1.6rem;
+  height: 0.1rem;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.owl-carousel__link-arrow:before {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 0.9rem;
+  height: 0.1rem;
+  background-color: #ffffff;
+  -webkit-transform-origin: 100%;
+          transform-origin: 100%;
+  top: 0;
+  right: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.owl-carousel__link-arrow:after {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 0.9rem;
+  height: 0.1rem;
+  background-color: #ffffff;
+  -webkit-transform-origin: 100%;
+          transform-origin: 100%;
+  top: 0;
+  right: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.owl-carousel__link:active {
+  font-weight: 600;
+}
+
+.owl-carousel__link:active .owl-carousel__link-arrow {
+  -webkit-transform: translateY(0.1rem);
+          transform: translateY(0.1rem);
 }
 
 .owl-nav {
@@ -461,10 +555,10 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: absolute;
   bottom: 2rem;
   z-index: 2;
 }
@@ -490,5 +584,11 @@ html {
 .owl-dot.active span {
   width: 1.6rem;
   height: 1.6rem;
+}
+
+@media (max-height: 1068px) {
+  .owl-carousel__slider {
+    background-size: 100% 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

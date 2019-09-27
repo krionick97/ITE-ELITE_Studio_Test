@@ -6,14 +6,78 @@
       width: 100vw
       height: 100vh
       background-image: url('../img/img-slide-1.jpg')
-      background-size: 100% 100%
+      background-size: auto 100%
       position: relative
+    &__block
+      display: inline-block
+      background-color: rgba($color-dark, 0.4)
+      padding: 0.2rem 1rem 0.6rem 1.2rem
+      margin: 73.2vh 0 2rem 4vw
+      &-title
+        +notoSans
+        font-size: 5.8rem
+        color: $color-white
+        text-transform: uppercase
+        margin-bottom: 1.5rem
+      &-subtitle
+        +notoSans
+        font-size: 3.6rem
+        color: $color-white
+        text-transform: uppercase
+    &__link
+      width: 17rem
+      padding: 1.5rem 1.8rem
+      margin: 0 0 0 5vw
+      display: flex
+      justify-content: space-between
+      align-items: center
+      background-color: $color-link-bg
+      +lora
+      color: $color-white
+      font-size: 1.8rem
+      text-decoration: none
+      border-radius: 0.1rem
+      &:hover
+        cursor: pointer
+      &-arrow
+        display: block
+        width: 1.6rem
+        height: 0.1rem
+        background-color: $color-white
+        position: relative
+        &:before
+          display: block
+          content: ''
+          position: absolute
+          width: 0.9rem
+          height: 0.1rem
+          background-color: $color-white
+          transform-origin: 100%
+          top: 0
+          right: 0
+          transform: rotate(-45deg)
+        &:after
+          display: block
+          content: ''
+          position: absolute
+          width: 0.9rem
+          height: 0.1rem
+          background-color: $color-white
+          transform-origin: 100%
+          top: 0
+          right: 0
+          transform: rotate(45deg)
+      &:active
+        font-weight: 600
+        .owl-carousel__link-arrow
+          transform: translateY(0.1rem)
+
   &-nav
     display: none
   &-dots
     display: flex
-    position: absolute
     align-items: center
+    position: absolute
     bottom: 2rem
     z-index: 2
   &-dot
@@ -30,3 +94,10 @@
   &-dot.active span
     width: 1.6rem
     height: 1.6rem
+
+// Responsive
+@media (max-height: 1068px)
+  .owl
+    &-carousel
+      &__slider
+        background-size: 100% 100%

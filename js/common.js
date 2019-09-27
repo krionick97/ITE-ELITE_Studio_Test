@@ -1,4 +1,4 @@
-
+const sliderLinks = document.querySelectorAll('.slider-link');
 
 /* Mobile Menu */
 document.addEventListener('DOMContentLoaded', () => {

@@ -23,11 +23,11 @@
           <nav class="main__deskMenu">
             <ul class="main__deskMenu-list">
               <li class="main__menu-item"><a href="#" class="main__menu-link">Каталог товаров</a></li>
-              <li class="main__menu-item"><a href="#" class="main__menu-link">Новости и акции</a></li>
-              <li class="main__menu-item"><a href="#" class="main__menu-link">Наши услуги</a></li>
-              <li class="main__menu-item"><a href="#" class="main__menu-link">Портфолио</a></li>
-              <li class="main__menu-item"><a href="#" class="main__menu-link">Блог</a></li>
-              <li class="main__menu-item"><a href="#" class="main__menu-link">Контакты</a></li>
+              <li class="main__menu-item active"><span>1</span><a href="#" class="main__menu-link">Новости и акции</a></li>
+              <li class="main__menu-item"><span></span><a href="#" class="main__menu-link">Наши услуги</a></li>
+              <li class="main__menu-item"><span></span><a href="#" class="main__menu-link">Портфолио</a></li>
+              <li class="main__menu-item"><span></span><a href="#" class="main__menu-link">Блог</a></li>
+              <li class="main__menu-item"><span></span><a href="#" class="main__menu-link">Контакты</a></li>
             </ul>
             <ul class="main__deskMenu-companyData">
               <li class="main__menu-dataItem"><a href="#" class="main__menu-link">О компании</a></li>
@@ -98,6 +98,36 @@
         </nav> <!-- Mobile Menu-->
       </header>
 
+      <div class="form-feedback">
+          <div class="form-feedback__img"></div>
+          <div class="form-feedback__feedback">
+            <div class="form-feedback__close"></div>
+            <h3 class="form-feedback__title">Обратная связь</h3>
+            <form action="mail/mail.php" method="POST" name="feedbackForm" class="form-feedback__form" id="form">
+              <div class="form-feedback__block form-feedback__email">
+                <label for="email" class="form-feedback__label form-feedback__label-Email">E-mail</label>
+                <input type="email" id="email" name="email" class="form-feedback__input form-feedback__form-email" required>
+              </div>
+              <div class="form-feedback__block form-feedback__tel">
+                <label for="tel" class="form-feedback__label form-feedback__label-telephone">Телефон</label>
+                <input type="tel" id="tel" name="tel" class="form-feedback__input form-feedback__form-tel" required>
+              </div>
+              <div class="form-feedback__block form-feedback__text">
+                <label for="text" class="form-feedback__label form-feedback__label-message">Сообщение</label>
+                <textarea id="text" name="text" class="form-feedback__input form-feedback__form-text"></textarea>
+              </div>
+              <div class="form-feedback__button-block">
+                <button type="submit" class="form-feedback__form-btn">Отправить</button>
+              </div>
+            </form>
+          </div>
+        </div> <!-- Form Feedback -->
+        <div class="form-feedback__popup">
+          <p class="form-feedback__popup-paragraph">Большое спасибо!<br>Мы свяжемся с вами</p>
+          <button class="form-feedback__popup-btn">OK</button>
+        </div>
+        <div class="form-feedback__background"></div>
+
       <div class="main__rightSide">
 
         <!-- Owl-Carousel -->
@@ -107,49 +137,49 @@
             <div class="owl-carousel__block">
               <h2 class="owl-carousel__block-title">Декоративные покрытия</h2>
               <p class="owl-carousel__block-subtitle">От лучших производителей</p>
+              <a href="#" class="owl-carousel__link slider-link">
+                <span>Подробнее</span>
+                <div class="owl-carousel__link-arrow"></div>
+              </a>
             </div>
-            <a href="#" class="owl-carousel__link slider-link">
-              <span>Подробнее</span>
-              <div class="owl-carousel__link-arrow"></div>
-            </a>
           </div> <!-- Slider Item -->
-  
+    
           <!-- Slider Item -->
           <div class="owl-carousel__slider">
             <div class="owl-carousel__block">
               <h2 class="owl-carousel__block-title">Декоративные покрытия</h2>
               <p class="owl-carousel__block-subtitle">От лучших производителей</p>
+              <a href="#" class="owl-carousel__link slider-link">
+                <span>Подробнее</span>
+                <div class="owl-carousel__link-arrow"></div>
+              </a>
             </div>
-            <a href="#" class="owl-carousel__link slider-link">
-              <span>Подробнее</span>
-              <div class="owl-carousel__link-arrow"></div>
-            </a>
           </div> <!-- Slider Item -->
-  
+    
           <!-- Slider Item -->
           <div class="owl-carousel__slider">
             <div class="owl-carousel__block">
               <h2 class="owl-carousel__block-title">Декоративные покрытия</h2>
               <p class="owl-carousel__block-subtitle">От лучших производителей</p>
+              <a href="#" class="owl-carousel__link slider-link">
+                <span>Подробнее</span>
+                <div class="owl-carousel__link-arrow"></div>
+              </a>
             </div>
-            <a href="#" class="owl-carousel__link slider-link">
-              <span>Подробнее</span>
-              <div class="owl-carousel__link-arrow"></div>
-            </a>
           </div> <!-- Slider Item -->
-  
+    
           <!-- Slider Item -->
           <div class="owl-carousel__slider">
             <div class="owl-carousel__block">
               <h2 class="owl-carousel__block-title">Декоративные покрытия</h2>
               <p class="owl-carousel__block-subtitle">От лучших производителей</p>
+              <a href="#" class="owl-carousel__link slider-link">
+                <span>Подробнее</span>
+                <div class="owl-carousel__link-arrow"></div>
+              </a>
             </div>
-            <a href="#" class="owl-carousel__link slider-link">
-              <span>Подробнее</span>
-              <div class="owl-carousel__link-arrow"></div>
-            </a>
           </div> <!-- Slider Item -->
-  
+    
         </div> <!-- Owl-Carousel -->
         <div class="owl-nav">
             <div class="owl-prev">prev</div>
@@ -168,9 +198,11 @@
     </section> <!-- Main Section -->
   </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/8.2.3/mmenu.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
   <script src="js/common.js"></script>
+  <script src="js/form.js"></script>
 </body>
 </html>

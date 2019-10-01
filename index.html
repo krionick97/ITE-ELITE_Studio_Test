@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+  <!-- head section of your webpage -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/8.2.3/mmenu.css">
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/mmenu.css">
   <title>Сияние</title>
 </head>
 <body>
+  <!-- body section of your webpage -->
   <div id="my-page">
-    <section class="main">
+    <div class="main">
       <div class="main__leftSide">
         <div class="main__logo">
-          <img src="img/Logo.png" alt="">
+          <img src="img/Logo.png" alt="logotype">
           <p class="main__logo-paragraph">Интернет-магазин отделочных материалов и дизайна</p>
         </div>
         <div class="main__menu">
@@ -54,7 +55,7 @@
         </div>
         <a href="tel:+74822648080" class="main__menu-tel">
           <div class="main__menu-phone">
-            <img src="img/phone-img.png" alt="Phone">
+            <img src="img/phone-img.png" alt="telephone">
           </div>
         </a>
         <!-- Mobile Menu -->
@@ -97,36 +98,6 @@
           </ul>
         </nav> <!-- Mobile Menu-->
       </header>
-
-      <div class="form-feedback">
-          <div class="form-feedback__img"></div>
-          <div class="form-feedback__feedback">
-            <div class="form-feedback__close"></div>
-            <h3 class="form-feedback__title">Обратная связь</h3>
-            <form action="mail/mail.php" method="POST" name="feedbackForm" class="form-feedback__form" id="form">
-              <div class="form-feedback__block form-feedback__email">
-                <label for="email" class="form-feedback__label form-feedback__label-Email">E-mail</label>
-                <input type="email" id="email" name="email" class="form-feedback__input form-feedback__form-email" required>
-              </div>
-              <div class="form-feedback__block form-feedback__tel">
-                <label for="tel" class="form-feedback__label form-feedback__label-telephone">Телефон</label>
-                <input type="tel" id="tel" name="tel" class="form-feedback__input form-feedback__form-tel" required>
-              </div>
-              <div class="form-feedback__block form-feedback__text">
-                <label for="text" class="form-feedback__label form-feedback__label-message">Сообщение</label>
-                <textarea id="text" name="text" class="form-feedback__input form-feedback__form-text"></textarea>
-              </div>
-              <div class="form-feedback__button-block">
-                <button type="submit" class="form-feedback__form-btn">Отправить</button>
-              </div>
-            </form>
-          </div>
-        </div> <!-- Form Feedback -->
-        <div class="form-feedback__popup">
-          <p class="form-feedback__popup-paragraph">Большое спасибо!<br>Мы свяжемся с вами</p>
-          <button class="form-feedback__popup-btn">OK</button>
-        </div>
-        <div class="form-feedback__background"></div>
 
       <div class="main__rightSide">
 
@@ -195,12 +166,44 @@
 
       </div> <!-- Right Side -->
 
-    </section> <!-- Main Section -->
+    </div> <!-- Main Section -->
+
+    <div class="form-feedback">
+      <div class="form-feedback__img"></div>
+      <div class="form-feedback__feedback">
+        <div class="form-feedback__close"></div>
+        <h3 class="form-feedback__title">Обратная связь</h3>
+        <form action="mail/mail.php" method="POST" name="feedbackForm" class="form-feedback__form" id="form">
+          <div class="form-feedback__block form-feedback__email">
+            <label for="email" class="form-feedback__label form-feedback__label-Email">E-mail</label>
+            <input type="email" id="email" name="email" class="form-feedback__input form-feedback__form-email" required>
+          </div>
+          <div class="form-feedback__block form-feedback__tel">
+            <label for="tel" class="form-feedback__label form-feedback__label-telephone">Телефон</label>
+            <input type="tel" id="tel" name="tel" class="form-feedback__input form-feedback__form-tel" required>
+          </div>
+          <div class="form-feedback__block form-feedback__text">
+            <label for="text" class="form-feedback__label form-feedback__label-message">Сообщение</label>
+            <textarea id="text" name="text" class="form-feedback__input form-feedback__form-text"></textarea>
+          </div>
+          <div class="form-feedback__button-block">
+            <button type="submit" class="form-feedback__form-btn">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div> <!-- Form Feedback -->
+    <div class="form-feedback__popup">
+      <p class="form-feedback__popup-paragraph">Большое спасибо!<br>Мы свяжемся с вами</p>
+      <button class="form-feedback__popup-btn">OK</button>
+    </div>
+    <div class="form-feedback__background"></div>
+
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/8.2.3/mmenu.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="js/mmenu/dist/mmenu.polyfills.js"></script>
+  <script src="js/mmenu/dist/mmenu.js"></script>
   <script src="js/jquery.maskedinput.min.js"></script>
   <script src="js/common.js"></script>
   <script src="js/form.js"></script>

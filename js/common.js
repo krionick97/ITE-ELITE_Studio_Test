@@ -1,7 +1,7 @@
 'use strict'
 
 /* Mobile Menu */
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
   new Mmenu('#my-menu', {
     // options
     navbar: {
@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
       selected: 'active'
     },
   });
-
 }); // End of MMenu settings
 
 $(document).ready(function() {
@@ -28,17 +27,17 @@ $(document).ready(function() {
   // const inputText = feedbackForm.text;
 
   /* Open Feedback */
-  callFeedback.addEventListener('click', () => {
+  callFeedback.addEventListener('click', function() {
     feedback.style.display = 'flex';
     document.querySelector('.form-feedback__background').style.display = 'block';
   });
 
   /* Close Feedback */
-  closeFeedback.addEventListener('click', () => {
+  closeFeedback.addEventListener('click', function() {
     feedback.style.display = 'none';
     feedbackBackground.style.display = 'none';
   });
-  window.addEventListener('click', (event) => {
+  window.addEventListener('click', function(event) {
     const clickMouse = event.target;
     if(clickMouse === feedbackBackground) {      
       feedback.style.display = 'none';

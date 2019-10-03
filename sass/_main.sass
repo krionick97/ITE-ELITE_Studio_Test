@@ -1,5 +1,8 @@
 #my-page
-  max-width: 192rem
+  max-width: 256rem
+  max-height: 204.8rem
+  width: 100%
+  height: 100%
   margin: 0 auto
 
 .header
@@ -12,9 +15,8 @@
 
 .main
   width: 100%
-  height: 100vh
+  height: 100%
   display: flex
-  position: relative
   &__title
     +georgia
     font-size: 2.8rem
@@ -22,12 +24,19 @@
     text-transform: uppercase
 
   &__leftSide
-    width: 31rem
+    display: block
+    width: $leftSide-width
     height: 100%
     background: url('../img/background-side.jpg')
     background-size: cover
   &__rightSide
+    max-width: 225rem
+    width: 100%
+    overflow: hidden
+    height: 100%
+    padding: 0
     flex-grow: 1
+    position: relative
 
   &__logo
     margin: 0 auto 18rem
@@ -35,6 +44,8 @@
     width: 24.2rem
     & img
       margin-bottom: 2.8rem
+      width: 100%
+      height: auto
     &-paragraph
       +openSans
       font-size: 1.6rem
@@ -45,7 +56,9 @@
     &-list
       margin-bottom: 12.2rem
     &-companyData
-      margin-bottom: 6.1rem
+      margin: 0 0 6.1rem 3.8rem
+    &-contacts
+      margin-left: 3.8rem
   &__mobileMenu
     display: none
     &-list .main__menu-item:before
@@ -105,7 +118,9 @@
       margin: 4.6rem 0
       position: relative
       text-transform: uppercase
-      &.active
+      & .main__menu-link
+        margin-left: 3.8rem
+      &.news
         position: relative
         transform-origin: 100%
         & span
@@ -135,7 +150,6 @@
         transition: 0.1s
     &-link
       +openSans
-      margin-left: 3.8rem
       font-size: 1.6rem
       color: $color-link
       text-decoration-line: none
@@ -174,7 +188,6 @@
     &-feedback
       +openSans
       font-size: 1.6rem
-      margin-left: 3.8rem
       transition: 0.1s
       color: $color-link-red
       position: relative
@@ -185,6 +198,7 @@
         height: 0.1rem
         background: url('../img/dashed-underline.svg')
         background-size: cover
+        // border-bottom: 0.1rem dashed $color-link-red
         bottom: -0.5rem
       &:hover
         cursor: pointer
@@ -242,7 +256,7 @@
     display: block
     width: 100%
     height: 3rem
-    box-sizing: content-box
+    box-sizing: border-box
   &__title
     +notoSans
     font-size: 2rem
@@ -320,96 +334,244 @@
 
 
 
-/* Responsive */
-@media (max-width: 1880px)
-  .main
-    &__logo
-      margin: 0 auto 2.2rem
-      & img
-        display: block
-        height: 6rem
-        text-align: center
-        margin: 0 auto 2rem
+/*Aadaptive */
 
-@media (max-width: 1860px)
+/* Width adaptive */
+@media (max-width: 2048px)
   .main
-    &__logo-paragraph
-      max-width: 18rem
-      margin: 0 auto 0 3rem
+    &__rightSide
+      max-width: 173.8rem
 
-@media (max-width: 1024px)
+@media (max-width: 1920px)
   .main
-    &__logo
-      &-paragraph
-        display: none
-    &__leftSide
-      width: 30rem
+    &__rightSide
+      max-width: 161rem
 
-@media (max-width: 960px)
+@media (max-width: 1680px)
   .main
-    &__leftSide
-      width: 24rem
-    &__logo
-      width: 24rem
-      & img
-        width: 20rem
-        height: auto
-      &-link
-        font-size: 1.4rem
+    &__rightSide
+      max-width: 137rem
 
-@media (max-width: 820px)
+@media (max-width: 1600px)
   .main
-    &__logo
-      & img
-        display: block
-        height: 6rem
-        text-align: center
-        margin: 0 auto
-      &-paragraph
-        display: none
-    &__leftSide
-      width: 22rem
+    &__rightSide
+      max-width: 129rem
+
+@media (max-width: 1536px)
+  .main
+    &__rightSide
+      max-width: 122.6rem
+    &__deskMenu
+      &-companyData
+        margin: 0 0 5.8rem 4rem
+
+
+@media (max-width: 1440px)
+  .main
+    &__rightSide
+      max-width: 113rem
+
+@media (max-width: 1400px)
+  .main
     &__logo
       width: 22rem
-      & img
-        width: 18rem
-    &__menu
-      &-link
-        margin-left: 2.6rem
-      &-feedback
-        margin-left: 2.6rem
-
-@media (max-height: 1070px)
-  .main
-    &__logo
-      margin: 0 auto 2.2rem
-
-@media (max-height: 950px)
-  .main
-    &__menu
-      &-item
-        margin: 3rem 0
-        &:before
-          top: 2.6rem
+    &__leftSide
+      width: 27rem
+    &__rightSide
+      max-width: 109rem
+    &__menu-item .main__menu-link
+      margin-left: 2.9rem
     &__deskMenu
       &-list
-        margin-bottom: 5rem
+        margin-bottom: 10rem
       &-companyData
-        margin-bottom: 3rem
-      &-dataItem
-        &:not(:last-child)
-          margin-bottom: 1rem
+        margin: 0 0 5.8rem 2.9rem
+      &-contacts
+        margin-left: 2.9rem
 
-@media (max-height: 720px)
+@media (max-width: 1350px)
+  .main
+    &__rightSide
+      max-width: 108rem
+
+@media (max-width: 1280px)
+  .main
+    &__rightSide
+      max-width: 101rem
+
+@media (max-width: 1260px)
   .main
     &__logo
-      margin: 0 auto 1.2rem
+      width: 20rem
+    &__rightSide
+      max-width: 99rem
 
-@media (max-width: 768px)
+@media (max-width: 1200px)
+  .main
+    &__rightSide
+      max-width: 93rem
+
+/* Width when menu switched to mobile-menu */
+@media (max-width: 1150px)
   .main
     display: block
     &__leftSide
       display: none
+    &__rightSide
+      max-width: 100%
   .header
     display: flex
-    justify-content: space-between
+    justify-content: space-between    
+
+
+/* Height adaptive */
+@media (max-height: 1050px)
+  .main
+    &__logo
+      margin: 0 auto 10rem
+
+@media (max-height: 960px)
+  .main
+    &__logo
+      margin: 0 auto 8rem
+      &-paragraph
+        display: none
+      & img
+        margin-bottom: 0
+
+@media (max-height: 860px)
+  .main
+    &__logo
+      margin: 0 auto 4rem
+    &__deskMenu
+      &-list
+        margin-bottom: 8rem
+
+@media (max-height: 790px)
+  .main
+    &__menu
+      &-item
+        margin: 4rem 0
+        &:before
+          top: 3rem
+      &-dataItem:not(:last-child)
+        margin-bottom: 1.4rem
+      &-link
+        font-size: 1.4rem
+    &__deskMenu
+      &-list
+        margin-bottom: 6rem
+      &-companyData
+        margin-bottom: 3rem
+
+/* Height when menu switched to mobile-menu */
+@media (max-height: 660px)
+  .main
+    display: block
+    &__leftSide
+      display: none
+    &__rightSide
+      max-width: 100%
+  .header
+    display: flex
+    justify-content: space-between    
+
+
+
+
+
+
+
+
+// @media (max-width: 1880px)
+//   .main
+//     &__logo
+//       margin: 0 auto 2.2rem
+//       & img
+//         display: block
+//         height: 6rem
+//         text-align: center
+//         margin: 0 auto 2rem
+
+// @media (max-width: 1860px)
+//   .main
+//     &__logo-paragraph
+//       max-width: 18rem
+//       margin: 0 auto 0 3rem
+
+// @media (max-width: 1024px)
+//   .main
+//     &__logo
+//       &-paragraph
+//         display: none
+//     &__leftSide
+//       width: 30rem
+
+// @media (max-width: 960px)
+//   .main
+//     &__leftSide
+//       width: 24rem
+//     &__logo
+//       width: 24rem
+//       & img
+//         width: 20rem
+//         height: auto
+//       &-link
+//         font-size: 1.4rem
+
+// @media (max-width: 820px)
+//   .main
+//     &__logo
+//       & img
+//         display: block
+//         height: 6rem
+//         text-align: center
+//         margin: 0 auto
+//       &-paragraph
+//         display: none
+//     &__leftSide
+//       width: 22rem
+//     &__logo
+//       width: 22rem
+//       & img
+//         width: 18rem
+//     &__menu
+//       &-link
+//         margin-left: 2.6rem
+//       &-feedback
+//         margin-left: 2.6rem
+
+// @media (max-height: 1070px)
+//   .main
+//     &__logo
+//       margin: 0 auto 2.2rem
+
+// @media (max-height: 950px)
+//   .main
+//     &__menu
+//       &-item
+//         margin: 3rem 0
+//         &:before
+//           top: 2.6rem
+//     &__deskMenu
+//       &-list
+//         margin-bottom: 5rem
+//       &-companyData
+//         margin-bottom: 3rem
+//       &-dataItem
+//         &:not(:last-child)
+//           margin-bottom: 1rem
+
+// @media (max-height: 720px)
+//   .main
+//     &__logo
+//       margin: 0 auto 1.2rem
+
+// @media (max-width: 768px)
+//   .main
+//     display: block
+//     &__leftSide
+//       display: none
+//   .header
+//     display: flex
+//     justify-content: space-between

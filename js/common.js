@@ -1,4 +1,13 @@
 'use strict'
+jQuery.event.special.touchstart = {
+  setup: function( _, ns, handle ){
+    if ( ns.includes("noPreventDefault") ) {
+      this.addEventListener("touchstart", handle, { passive: false });
+    } else {
+      this.addEventListener("touchstart", handle, { passive: true });
+    }
+  }
+};
 
 /* Mobile Menu */
 document.addEventListener('DOMContentLoaded', function() {
@@ -21,7 +30,7 @@ $(document).ready(function() {
   const closeFeedback = document.querySelector('.form-feedback__close');
   const feedback = document.querySelector('.form-feedback');
   const feedbackBackground = document.querySelector('.form-feedback__background');
-  const feedbackForm = document.forms.feedbackForm;
+  // const feedbackForm = document.forms.feedbackForm;
   // const inputEmail = feedbackForm.email;
   // const inputTel = feedbackForm.tel;
   // const inputText = feedbackForm.text;
@@ -49,13 +58,9 @@ $(document).ready(function() {
   $(".owl-carousel").owlCarousel({
     loop: true,
     nav: true,
-    margin: 0,
+    // autoWidth: true,
     dotsContainer: '#carousel-custom-dots',
-    responsive: {
-      0: {
-        items: 1
-      }
-    }
+    items: 1
   });
 
   const owl = $('.owl-carousel');
@@ -80,35 +85,31 @@ $(document).ready(function() {
   });
 
   /* Send Form-data from Feedback */
-  // feedbackForm.addEventListener('submit', (event) => {
-  //   event.preventDefault();
-  //   const url = 'C:/MAMP/htdocs/php-study/mail/mail.php'
-  //   let email = inputEmail.value;
-  //   let tel = inputTel.value;
-  //   let text = inputText.value;
+  $('form').submit(function(event) {
+    event.preventDefault();
+    let formID = $(this).attr('id');
+    let formNm = $('#' + formID);
 
-  //   let user = {
-  //     email: email,
-  //     phoneNumber: tel,
-  //     message: text
-  //   }
+    $.ajax({
+      type: $(this).attr('method'),
+      url: $(this).attr('action'),
+      data: formNm.serialize(),
+      contentType: false,
+      cache: false,
+      processData: false,
+      success: function() {
+        // $(formNm).html(data);
+        $('form').trigger('reset');
+        $('.form-feedback__popup').css('display', 'block');
+      }
+    });
+    return false;
+  });
 
-  //   let userJSON = JSON.stringify(user);
-
-  //   if (email === '') {
-  //     alert('Введите адрес e-mail');
-  //   }
-  //   if(tel === '') {
-  //     alert('Введите телефонный номер');
-  //   }
-
-  //   fetch('url', {
-  //     method: POST,
-  //     body: userJSON
-  //   });
-
-  //   feedbackForm.reset();
-
-  // });
+  document.querySelector('.form-feedback__popup-btn').addEventListener('click', function() {
+    document.querySelector('.form-feedback__popup').style.display = 'none';
+    document.querySelector('.form-feedback').style.display = 'none';
+    document.querySelector('.form-feedback__background').style.display = 'none';
+  });
 
 });

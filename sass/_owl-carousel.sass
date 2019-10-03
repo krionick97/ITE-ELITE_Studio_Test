@@ -1,28 +1,49 @@
 .owl
+  &-stage
+    height: 100%
+    &-outer
+      width: 100%
+      height: 100%
+  &-item
+    height: 100%
   &-carousel
-    max-width: 161rem
+    width: 100%
+    height: 100%
     &__slider
-      height: 100vh
+      height: 100%
       background-image: url('../img/img-slide-1.jpg')
-      background-size: auto 100%
+      background-size: cover
       position: relative
     &__block
       display: inline-block
-      background-color: rgba($color-dark, 0.4)
-      padding: 2rem 6rem 2.2rem 2rem
-      margin: 71.5vh 0 0.8rem 4vw
-      position: relative
-      z-index: 1
-      &:before
-        position: absolute
-        content: ''
-        display: block
-        width: 89rem
-        height: 15rem
-        background-color: rgba($color-dark, 0.3)
-        z-index: -1
-        top: 3.2rem
-        left: 2.2rem
+      position: absolute
+      bottom: 10vh
+      left: 8.8rem
+      &-text
+        position: relative
+        z-index: 1
+        &:before
+          content: ''
+          position: absolute
+          display: block
+          width: 84rem
+          height: 14rem
+          background-color: rgba($color-dark, 0.4)
+          z-index: -1
+          top: 0
+          left: 0
+          transform: translate(-1.4rem, -1rem)
+        &:after
+          content: ''
+          position: absolute
+          display: block
+          width: 84rem
+          height: 14rem
+          background-color: rgba($color-dark, 0.3)
+          z-index: -1
+          top: 0
+          left: 0
+          transform: translate(1.4rem, 2rem)
       &-title
         +notoSans
         font-size: 5.8rem
@@ -49,6 +70,7 @@
       text-decoration: none
       border-radius: 0.1rem
       z-index: 3
+      position: relative
       &:hover
         cursor: pointer
       &-arrow
@@ -90,10 +112,10 @@
     display: flex
     align-items: center
     position: absolute
-    bottom: 2rem
+    left: 6.8rem
+    // bottom: 4.8rem
+    bottom: 4.6vh
     z-index: 2
-    bottom: 4.2vh
-    left: 19.8vw
   &-dot
     margin: 0 0.5rem
     &:hover
@@ -109,59 +131,64 @@
     width: 1.6rem
     height: 1.6rem
 
-Responsive
-@media (max-width: 1920px)
-  .owl
-    &-dots
-      left: 22vw
+// Responsive
 
-@media (max-width: 1620px)
-  .owl
-    &-carousel
-      &__slider
-        background-size: cover
 
-@media (max-width: 1420px)
-  .owl
-    &-carousel
-      &__block
-        margin: 70vh 0 2rem 4vw
 
-@media (max-width: 1290px)
-  .owl
-    &-dots
-      left: 26vw
-@media (max-width: 1120px)
-  .owl
-    &-dots
-      left: 28vw
 
-@media (max-width: 769px)
-  .owl
-    &-dots
-      bottom: 6vh
-      left: 10vw
-    &-carousel
-      &__block
-        margin: 40vh 0 2rem 4vw  
 
-@media (max-height: 980px)
-  .owl
-    &-dots
-      bottom: 5vh
-      left: 20vw
-    &-carousel
-      &__block
-        margin: 60vh 0 2rem 4vw
+// @media (max-width: 1920px)
+//   .owl
+//     &-dots
+//       left: 22vw
 
-@media (max-height: 790px)
-  .owl
-    &-carousel
-      &__block
-        margin: 50vh 0 2rem 4vw
+// @media (max-width: 1620px)
+//   .owl
+//     &-carousel
+//       &__slider
+//         background-size: cover
 
-@media (max-height: 1068px)
-  .owl
-    &-carousel
-      &__slider
-        background-size: 100% 100%
+// @media (max-width: 1420px)
+//   .owl
+//     &-carousel
+//       &__block
+//         margin: 70vh 0 2rem 4vw
+
+// @media (max-width: 1290px)
+//   .owl
+//     &-dots
+//       left: 26vw
+// @media (max-width: 1120px)
+//   .owl
+//     &-dots
+//       left: 28vw
+
+// @media (max-width: 769px)
+//   .owl
+//     &-dots
+//       bottom: 6vh
+//       left: 10vw
+//     &-carousel
+//       &__block
+//         margin: 40vh 0 2rem 4vw  
+
+// @media (max-height: 980px)
+//   .owl
+//     &-dots
+//       bottom: 5vh
+//       left: 20vw
+//     &-carousel
+//       &__block
+//         margin: 60vh 0 2rem 4vw
+
+// @media (max-height: 790px)
+//   .owl
+//     &-carousel
+//       &__block
+//         margin: 50vh 0 2rem 4vw
+
+// @media (max-height: 1068px)
+//   .owl
+//     &-carousel
+//       &__slider
+//         background-size: 100% 100%
